@@ -19,48 +19,48 @@ node "Mobile App" {
 }
 
 node "Web App" {
-  component [Web App\n(React/Vue.js)]
+  component [Web App\n(React)]
 }
 
 node "API Gateway" {
-  component [API Gateway\n(Nginx/Kong)]
+  component [API Gateway\n(Nginx)]
 }
 
 node "Services" {
   node "User Service" {
-    component [User Service\n(Node.js/Java)]
+    component [User Service\n(Java)]
   }
   
   node "Payment Service" {
-    component [Payment Service\n(Node.js/Java)]
+    component [Payment Service\n(Java)]
   }
   
   node "Driver Service" {
-    component [Driver Service\n(Node.js/Java)]
+    component [Driver Service\n(Java)]
   }
   
   node "Notification Service" {
-    component [Notification Service\n(Node.js/Java)]
+    component [Notification Service\n(Java)]
   }
 }
 
 node "Data Layer" {
   database "Database" {
-    component [Database\n(PostgreSQL/MongoDB)]
+    component [Database\n(PostgreSQL)]
   }
   
   node "Cache" {
-    component [Cache\n(Redis/Memcached)]
+    component [Cache\n(Redis)]
   }
 }
 
 node "Message Queue" {
-  component [Message Queue\n(Kafka/RabbitMQ)]
+  component [Message Queue\n(Kafka)]
 }
 
 node "External Services" {
   node "External Payment Gateway" {
-    component [External Payment\nGateway (Stripe/PayPal)]
+    component [External Payment\nGateway (Stripe)]
   }
 }
 
