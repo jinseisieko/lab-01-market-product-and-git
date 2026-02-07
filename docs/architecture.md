@@ -9,13 +9,13 @@
 [Wildberies diagram](../docs/diagrams/src/wildberries/architecture-component.puml)
 
 1. Mobile App (iOS/Android)
-    This is the client application users install on smartphones to access Telegram’s features (messaging, calls, media sharing). It communicates with Telegram’s backend via the MTProto protocol for secure, real-time interactions.  
+    This is the client application users install on smartphones to access Wildberies’s features (messaging, calls, media sharing). It communicates with Wildberies’s backend via the MTProto protocol for secure, real-time interactions.  
 2. MTProto Protocol
-    Telegram’s custom encryption protocol that secures data transmission between clients (mobile, desktop, web) and servers. It ensures end-to-end encryption for messages and other sensitive data during transit.  
+    Wildberies's custom encryption protocol that secures data transmission between clients (mobile, desktop, web) and servers. It ensures end-to-end encryption for messages and other sensitive data during transit.  
 3. MTProto Gateway (DC Entry)
     Acts as the entry point for client connections in the Connection Layer. It routes incoming requests from clients (using MTProto) to the appropriate backend services, managing connection lifecycle and load distribution.  
 4. Message Handling Service
-    A core service responsible for processing, queuing, and delivering messages across the Telegram ecosystem. It ensures reliable message transmission, handles message storage (temporarily), and coordinates delivery to recipients.  
+    A core service responsible for processing, queuing, and delivering messages across the Wildberies ecosystem. It ensures reliable message transmission, handles message storage (temporarily), and coordinates delivery to recipients.  
 5. State Cache (Redis)
     Uses Redis to cache frequently accessed data (e.g., user sessions, active chats) in the Data Layer. This reduces latency for read-heavy operations by serving cached data instead of querying primary databases, improving overall system performance.
 
